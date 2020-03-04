@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using PhoneBookDAL;
+using PhoneBookDAL.Models;
+using PhoneBookDAL.Repository;
 
 namespace PhoneBookLibrary
 {

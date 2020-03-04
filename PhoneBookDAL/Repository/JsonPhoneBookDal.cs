@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using Newtonsoft.Json;
-using PhoneBookLibrary;
+using PhoneBookDAL.Models;
 
-namespace PhoneBookDAL
+namespace PhoneBookDAL.Repository
 {
     public class JsonPhoneBookDal : IPhoneBookDal
     {
-        private string _file;
+        private readonly string _file;
 
         public JsonPhoneBookDal(string file)
         {

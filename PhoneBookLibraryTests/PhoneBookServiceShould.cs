@@ -6,6 +6,8 @@ using NUnit.Framework;
 using PhoneBookLibrary;
 using Moq;
 using PhoneBookDAL;
+using PhoneBookDAL.Models;
+using PhoneBookDAL.Repository;
 
 namespace PhoneBookLibraryTests
 {

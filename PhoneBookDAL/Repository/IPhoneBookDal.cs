@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using PhoneBookLibrary;
+﻿using System.Collections.Generic;
+using PhoneBookDAL.Models;
 
-
-namespace PhoneBookDAL
+namespace PhoneBookDAL.Repository
 {
     public interface IPhoneBookDal
     {

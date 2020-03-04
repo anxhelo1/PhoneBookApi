@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using PhoneBookDAL;
+using PhoneBookDAL.Repository;
 using PhoneBookLibrary;
 
 namespace BookWebApi
