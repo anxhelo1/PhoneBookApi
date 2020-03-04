@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using PhoneBookDAL.Models;
 using PhoneBookLibrary;
 
@@ -20,7 +15,7 @@ namespace BookWebApi.Controllers
             _phoneBookService = phoneBookService;
         }
 
-        [HttpGet("")]
+        [HttpGet]
         public ActionResult GetPhoneBooks()
         {
             return Ok(_phoneBookService.GetAll());
@@ -38,12 +33,11 @@ namespace BookWebApi.Controllers
             return Ok(phoneBook);
         }
 
-        [HttpPost("")]
+        [HttpPost]
         public ActionResult AddPhoneBook(PhoneBook phoneBook)
         {
-
-             _phoneBookService.Create(phoneBook);
-             return NoContent();
+            _phoneBookService.Create(phoneBook);
+            return NoContent();
         }
 
         [HttpDelete("{id}")]

@@ -1,7 +1,5 @@
-﻿using System;
+﻿using PhoneBookDAL.Models;
 using System.Collections.Generic;
-using System.Text;
-using PhoneBookDAL.Models;
 
 namespace PhoneBookLibrary
 {
@@ -11,5 +9,5 @@ namespace PhoneBookLibrary
         List<PhoneBook> GetAll();
         PhoneBook Get(int id);
         void Delete(int id);
-    } 
+    }
 }

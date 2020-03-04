@@ -30,7 +30,7 @@ namespace BookWebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IPhoneBookService, PhoneBookService>();
-            services.AddTransient<IPhoneBookDal>(x => new JsonPhoneBookDal(Configuration.GetSection("DatabaseFiles")["JsonFile"]));
+            services.AddTransient<IPhoneBookRepository>(x => new JsonPhoneBookRepository(Configuration.GetSection("DatabaseFiles")["JsonFile"]));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 

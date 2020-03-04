@@ -40,7 +40,7 @@ namespace PhoneBookLibraryTests
         public void ReturnTheListOfPhoneBooks()
         {
            
-            var mockedPhoneBookDal = new Mock<IPhoneBookDal>();
+            var mockedPhoneBookDal = new Mock<IPhoneBookRepository>();
             mockedPhoneBookDal.Setup(x => x.GetPhoneBooks())
                 .Returns(_list);
 
@@ -54,7 +54,7 @@ namespace PhoneBookLibraryTests
         public void AddPhoneBookToList()
         {
 
-            var mockedPhoneBookDal = new Mock<IPhoneBookDal>();
+            var mockedPhoneBookDal = new Mock<IPhoneBookRepository>();
             var phoneBook = new PhoneBook();
             mockedPhoneBookDal.Setup(x => x.GetPhoneBooks())
                 .Returns(_list);
@@ -71,7 +71,7 @@ namespace PhoneBookLibraryTests
         public void AddFirstPhoneBookWithId1()
         {
 
-            var mockedPhoneBookDal = new Mock<IPhoneBookDal>();
+            var mockedPhoneBookDal = new Mock<IPhoneBookRepository>();
             var phoneBook = new PhoneBook();
             mockedPhoneBookDal.Setup(x => x.GetPhoneBooks())
                 .Returns(new List<PhoneBook>());
@@ -88,7 +88,7 @@ namespace PhoneBookLibraryTests
         public void RemovesPhoneBook()
         {
 
-            var mockedPhoneBookDal = new Mock<IPhoneBookDal>();
+            var mockedPhoneBookDal = new Mock<IPhoneBookRepository>();
             mockedPhoneBookDal.Setup(x => x.GetPhoneBooks())
                 .Returns(_list);
             mockedPhoneBookDal.Setup(x => x.SavePhoneBooks(_list));

@@ -1,32 +1,28 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using PhoneBookDAL;
-using PhoneBookDAL.Models;
+﻿using PhoneBookDAL.Models;
 using PhoneBookDAL.Repository;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace PhoneBookLibrary
 {
     public class PhoneBookService : IPhoneBookService
     {
         private readonly List<PhoneBook> _list;
-        private readonly IPhoneBookDal _phoneBookDal;
+        private readonly IPhoneBookRepository _phoneBookDal;
 
-        public PhoneBookService(IPhoneBookDal iPhoneBookDal)
+        public PhoneBookService(IPhoneBookRepository iPhoneBookDal)
         {
             _phoneBookDal = iPhoneBookDal;
             _list = _phoneBookDal.GetPhoneBooks();
         }
         public void Create(PhoneBook phoneBook)
         {
-            
+
             var id = _list.Any() ? _list.Max(x => x.Id) + 1 : 1;
             phoneBook.Id = id;
 
-           _list.Add(phoneBook);
-           _phoneBookDal.SavePhoneBooks(_list);
+            _list.Add(phoneBook);
+            _phoneBookDal.SavePhoneBooks(_list);
         }
 
         public List<PhoneBook> GetAll()

@@ -5,11 +5,11 @@ using PhoneBookDAL.Models;
 
 namespace PhoneBookDAL.Repository
 {
-    public class JsonPhoneBookDal : IPhoneBookDal
+    public class JsonPhoneBookRepository : IPhoneBookRepository
     {
         private readonly string _file;
 
-        public JsonPhoneBookDal(string file)
+        public JsonPhoneBookRepository(string file)
         {
             _file = file;
         }
