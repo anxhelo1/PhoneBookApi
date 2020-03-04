@@ -34,7 +34,7 @@ namespace BookWebApi.Controllers
             {
                 return NotFound();
             }
-            return Ok(phoneBook.PhoneType.ToString());
+            return Ok(phoneBook);
         }
 
         [HttpPost("")]
