@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 using PhoneBookDAL.Models;
 using PhoneBookLibrary;
 
@@ -16,13 +17,13 @@ namespace BookWebApi.Controllers
         }
 
         [HttpGet]
-        public ActionResult GetPhoneBooks()
+        public ActionResult<List<PhoneBook>> GetPhoneBooks()
         {
             return Ok(_phoneBookService.GetAll());
         }
 
         [HttpGet("{id}")]
-        public ActionResult GetPhoneBook(int id)
+        public ActionResult<PhoneBook> GetPhoneBook(int id)
         {
             var phoneBook = _phoneBookService.Get(id);
 

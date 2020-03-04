@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookWebApi", "BookWebApi\BookWebApi.csproj", "{06AC0162-0169-4114-9ED6-64B24FA6602B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookWebApi", "BookWebApi\BookWebApi.csproj", "{06AC0162-0169-4114-9ED6-64B24FA6602B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBookLibrary", "PhoneBookLibrary\PhoneBookLibrary.csproj", "{179950D1-6B59-4CFC-A07A-68B064712CA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneBookLibrary", "PhoneBookLibrary\PhoneBookLibrary.csproj", "{179950D1-6B59-4CFC-A07A-68B064712CA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBookLibraryTests", "PhoneBookLibraryTests\PhoneBookLibraryTests.csproj", "{F6D47B49-E382-4FE9-99CC-12746F9579AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneBookLibraryTests", "PhoneBookLibraryTests\PhoneBookLibraryTests.csproj", "{F6D47B49-E382-4FE9-99CC-12746F9579AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBookDAL", "PhoneBookDAL\PhoneBookDAL.csproj", "{D3299405-E23A-4CED-8B0A-CC3E196BA172}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneBookDAL", "PhoneBookDAL\PhoneBookDAL.csproj", "{D3299405-E23A-4CED-8B0A-CC3E196BA172}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBooksApiTests", "PhoneBooksApiTests\PhoneBooksApiTests.csproj", "{B1A64323-EF2D-49E3-B4DF-E2C96F0DB6DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D3299405-E23A-4CED-8B0A-CC3E196BA172}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3299405-E23A-4CED-8B0A-CC3E196BA172}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3299405-E23A-4CED-8B0A-CC3E196BA172}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1A64323-EF2D-49E3-B4DF-E2C96F0DB6DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1A64323-EF2D-49E3-B4DF-E2C96F0DB6DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1A64323-EF2D-49E3-B4DF-E2C96F0DB6DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1A64323-EF2D-49E3-B4DF-E2C96F0DB6DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
