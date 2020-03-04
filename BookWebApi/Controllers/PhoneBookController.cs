@@ -12,7 +12,7 @@ namespace BookWebApi.Controllers
     [ApiController]
     public class PhoneBookController : ControllerBase
     {
-        private IPhoneBookService _phoneBookService;
+        private readonly IPhoneBookService _phoneBookService;
 
         public PhoneBookController(IPhoneBookService phoneBookService)
         {
@@ -34,20 +34,27 @@ namespace BookWebApi.Controllers
             {
                 return NotFound();
             }
-            return Ok(phoneBook);
+            return Ok(phoneBook.PhoneType.ToString());
         }
 
         [HttpPost("")]
         public ActionResult AddPhoneBook(PhoneBook phoneBook)
         {
-             _phoneBookService.Create(phoneBook);
 
+             _phoneBookService.Create(phoneBook);
              return NoContent();
         }
 
         [HttpDelete("{id}")]
         public ActionResult RemovePhoneBook(int id)
         {
+            var phoneBook = _phoneBookService.Get(id);
+
+            if (phoneBook == null)
+            {
+                return NotFound();
+            }
+
             _phoneBookService.Delete(id);
 
             return NoContent();

@@ -8,11 +8,11 @@ using PhoneBookLibrary;
 
 namespace PhoneBookDAL
 {
-    public class PhoneBookDal : IPhoneBookDal
+    public class JsonPhoneBookDal : IPhoneBookDal
     {
         private string _file;
 
-        public PhoneBookDal(string file)
+        public JsonPhoneBookDal(string file)
         {
             _file = file;
         }
